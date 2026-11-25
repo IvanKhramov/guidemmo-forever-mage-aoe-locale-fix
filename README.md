@@ -1,9 +1,9 @@
 # GuideMMO Forever Mage AOE - RU
 
-Unofficial plugin for [GuideMMO Forever Mage AOE](https://www.curseforge.com/wow/addons/guidemmo-forever-mage-aoe)
+Add-on for [GuideMMO Forever Mage AOE](https://www.curseforge.com/wow/addons/guidemmo-forever-mage-aoe)
 that fixes the **Show on map** button on the Russian (ruRU) WoW Forever client.
 
-Not affiliated with the author of the original addon. Contains no code or data from it.
+Made by a third party, not affiliated with the original author. Contains no code or data from the original addon.
 
 ## The problem
 
@@ -29,7 +29,7 @@ Only zone names are localized. Buttons, tabs and spot descriptions stay in Engli
 
 ## На русском
 
-Неофициальный плагин к GuideMMO Forever Mage AOE. Чинит кнопку **Show on map**
+Дополнение к GuideMMO Forever Mage AOE. Чинит кнопку **Show on map**
 в русском клиенте WoW Forever: оригинал ищет зону по английскому имени и не находит
 «Западный Край». Плагин подставляет русские названия зон по `UiMapID`.
 Ставится рядом с оригиналом в `Interface/AddOns`, после установки `/reload`.
