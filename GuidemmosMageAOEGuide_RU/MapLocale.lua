@@ -1,8 +1,9 @@
-if GetLocale() ~= "ruRU" or type(GuidemmosMageAOEData) ~= "table" then
+if type(GuidemmosMageAOEData) ~= "table" then
     return
 end
 
--- Zone UiMapIDs in WoW Forever.
+-- Zone UiMapIDs in WoW Forever. Must cover every zone used in the guide's Data.lua
+-- (checked by .github/scripts/check-upstream.sh).
 local mapIDs = {
     ["Alterac Mountains"] = 1416,
     ["Arathi Highlands"] = 1417,

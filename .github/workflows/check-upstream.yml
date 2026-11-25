@@ -1,0 +1,36 @@
+name: check-upstream
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check latest release of the original addon
+        id: check
+        shell: bash
+        run: .github/scripts/check-upstream.sh | tee report.md
+
+      - name: Open an issue for a new upstream release
+        if: steps.check.outputs.is_new == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FILE_ID: ${{ steps.check.outputs.file_id }}
+          VERSION: ${{ steps.check.outputs.version }}
+          OK: ${{ steps.check.outputs.ok }}
+        run: |
+          title="Upstream release $VERSION (file $FILE_ID)"
+          if gh issue list --state all --search "in:title \"file $FILE_ID\"" --json number --jq 'length' | grep -qx 0; then
+            if [ "$OK" = "true" ]; then verdict="Zones covered, test in game and bump upstream-file-id."; else verdict="Action needed: update MapLocale.lua."; fi
+            { echo "$verdict"; echo; cat report.md; } > body.md
+            gh issue create --title "$title" --body-file body.md
+          fi
