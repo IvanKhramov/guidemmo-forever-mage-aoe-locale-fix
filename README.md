@@ -1,7 +1,7 @@
-# GuideMMO Forever Mage AOE - RU
+# GuideMMO Forever Mage AOE - Locale Fix
 
 Add-on for [GuideMMO Forever Mage AOE](https://www.curseforge.com/wow/addons/guidemmo-forever-mage-aoe)
-that fixes the **Show on map** button on non-English WoW Forever clients (Russian, German, French and others).
+that fixes the **Show on map** button on non-English WoW Forever clients.
 
 Made by a third party, not affiliated with the original author. Contains no code or data from the original addon.
 
@@ -21,9 +21,12 @@ On an English client nothing changes.
 ## Install
 
 1. Install the original addon.
-2. Download the zip from [Releases](https://github.com/IvanKhramov/guidemmo-forever-mage-aoe-ru/releases)
-   and extract `GuidemmosMageAOEGuide_RU` into `Interface/AddOns`.
+2. Install this add-on from [CurseForge](https://www.curseforge.com/wow/addons/guidemmo-forever-mage-aoe-ru),
+   or download the zip from [Releases](https://github.com/IvanKhramov/guidemmo-forever-mage-aoe-locale-fix/releases)
+   and extract `GuidemmosMageAOEGuide_LocaleFix` into `Interface/AddOns`.
 3. `/reload`.
+
+Upgrading from 0.2.0 or older: delete the old `GuidemmosMageAOEGuide_RU` folder.
 
 Only zone names are localized. Buttons, tabs and spot descriptions stay in English.
 
@@ -35,13 +38,6 @@ every zone in its `Data.lua` is covered by `MapLocale.lua`.
 `upstream-file-id` holds the CurseForge file ID of the original release this add-on was last checked against.
 
 Run the check locally: `.github/scripts/check-upstream.sh`.
-
-## На русском
-
-Дополнение к GuideMMO Forever Mage AOE. Чинит кнопку **Show on map**
-в неанглийских клиентах WoW Forever: оригинал ищет зону по английскому имени и не находит,
-например, «Западный Край». Дополнение подставляет названия зон на языке клиента по `UiMapID`.
-Ставится рядом с оригиналом в `Interface/AddOns`, после установки `/reload`.
 
 ## License
 

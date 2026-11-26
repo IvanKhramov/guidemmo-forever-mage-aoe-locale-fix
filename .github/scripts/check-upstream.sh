@@ -8,7 +8,7 @@ set -euo pipefail
 
 MOD_SLUG="guidemmo-forever-mage-aoe"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-LOCALE_FILE="$ROOT/GuidemmosMageAOEGuide_RU/MapLocale.lua"
+LOCALE_FILE="$ROOT/GuidemmosMageAOEGuide_LocaleFix/MapLocale.lua"
 KNOWN_ID="$(tr -d '[:space:]' < "$ROOT/upstream-file-id")"
 
 WORK="$(mktemp -d)"

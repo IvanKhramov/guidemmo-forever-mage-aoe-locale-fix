@@ -1,0 +1,10 @@
+## Interface: 16001
+## Title: GuideMMO Forever Mage AOE - Locale Fix
+## Notes: Fixes "Show on map" zone lookup on non-English WoW Forever clients.
+## Author: Ivan Khramov
+## Version: 0.3.0
+## X-License: MIT
+## X-Website: https://github.com/IvanKhramov/guidemmo-forever-mage-aoe-locale-fix
+## Dependencies: GuidemmosMageAOEGuide
+
+MapLocale.lua
