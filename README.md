@@ -1,5 +1,10 @@
 # GuideMMO Forever Mage AOE - Locale Fix
 
+> **Deprecated.** Since version 2.0 the original addon looks up maps by ID and is translated
+> into 10 languages, so this add-on is no longer needed. Uninstall it and update
+> [GuideMMO Forever Mage AOE](https://www.curseforge.com/wow/addons/guidemmo-forever-mage-aoe).
+> Keeping it installed next to 2.0 does no harm.
+
 Add-on for [GuideMMO Forever Mage AOE](https://www.curseforge.com/wow/addons/guidemmo-forever-mage-aoe)
 that fixes the **Show on map** button on non-English WoW Forever clients.
 
